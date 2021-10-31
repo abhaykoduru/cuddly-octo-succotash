@@ -1,3 +1,6 @@
 from django.contrib import admin
+from repo.models import Document, Questionnaire
 
-# Register your models here.
+
+admin.site.register(Document)
+admin.site.register(Questionnaire)
