@@ -20,20 +20,20 @@ TBD
 
 ## Todo
 
-[ ] Setup database (PostgreSQL, AWS)
-[ ] Setup Django app
-[ ] Connection to database
-[ ] Create django models
-  [ ] User
-  [ ] Document
-  [ ] Questionnaire
-[ ] Add APIs
-  [ ] Authentication
-  [ ] File upload
-  [ ] Document search on title
-  [ ] Questionnaire search on q & a
-[ ] Add UI pages
-  [ ] Login page
-  [ ] Upload page
-  [ ] See uploaded documents?
-  [ ] Use django admin for admin users? With less than admin level perms?
+* [x] Setup database (PostgreSQL, AWS)
+* [x] Setup Django app
+* [x] Connection to database
+* [ ] Create django models
+    * [x] User
+    * [ ] Document
+    * [ ] Questionnaire
+* [ ] Add APIs
+    * [ ] Authentication
+    * [ ] File upload
+    * [ ] Document search on title
+    * [ ] Questionnaire search on q & a
+* [ ] Add UI pages
+    * [ ] Login page
+    * [ ] Upload page
+    * [ ] See uploaded documents?
+    * [ ] Use django admin for admin users? With less than admin level perms?
