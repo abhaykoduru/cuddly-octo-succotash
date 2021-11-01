@@ -8,7 +8,7 @@ class Document(models.Model):
     created_time = models.DateTimeField(auto_now_add= True)
     updated_time = models.DateTimeField(auto_now= True)
     created_by = models.ForeignKey(User, help_text="Document created by", on_delete=models.PROTECT, related_name="docs_created")
-    updated_by = models.ForeignKey(User, help_text="Document last updated by", on_delete=models.PROTECT, related_name="docs_last_updated")
+    updated_by = models.ForeignKey(User, null=True, help_text="Document last updated by", on_delete=models.PROTECT, related_name="docs_last_updated")
 
 
 class Questionnaire(models.Model):
@@ -17,4 +17,4 @@ class Questionnaire(models.Model):
     created_time = models.DateTimeField(auto_now_add= True)
     updated_time = models.DateTimeField(auto_now= True)
     created_by = models.ForeignKey(User, help_text="Questionnaire created by", on_delete=models.PROTECT, related_name="quests_created")
-    updated_by = models.ForeignKey(User, help_text="Questionnaire last updated by", on_delete=models.PROTECT, related_name="quests_last_updated_by")
+    updated_by = models.ForeignKey(User, null=True, help_text="Questionnaire last updated by", on_delete=models.PROTECT, related_name="quests_last_updated_by")
