@@ -23,12 +23,12 @@ TBD
 * [x] Setup database (PostgreSQL, AWS)
 * [x] Setup Django app
 * [x] Connection to database
-* [ ] Create django models
+* [x] Create django models
     * [x] User
-    * [ ] Document
-    * [ ] Questionnaire
+    * [x] Documentx
+    * [x] Questionnaire
 * [ ] Add APIs
-    * [ ] Authentication
+    * [x] Authentication
     * [ ] File upload
     * [ ] Document search on title
     * [ ] Questionnaire search on q & a
