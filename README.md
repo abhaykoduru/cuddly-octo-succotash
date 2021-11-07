@@ -18,6 +18,12 @@ TBD
         * Search on question-answer pairs of security questionnaires.
 * Script for creating batch users?
 
+## Assumptions and limitations of this project
+
+* This project uses PostgreSQL as the database which is a SQL databse. So, files uploaded should conform to the respective db schema.
+* Currently, this supports .csv files only.
+* Implements psuedo-multitenancy which gives access to records created by the requesting user only. Although, admin users will be able to access all records.
+
 ## Todo
 
 * [x] Setup database (PostgreSQL, AWS)
@@ -32,6 +38,7 @@ TBD
     * [ ] File upload
     * [ ] Document search on title
     * [ ] Questionnaire search on q & a
+* [ ] Add unit tests
 * [ ] Add UI pages
     * [ ] Login page
     * [ ] Upload page
