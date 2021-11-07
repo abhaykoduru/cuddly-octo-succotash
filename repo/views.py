@@ -13,7 +13,6 @@ from .models import Document, Questionnaire
 class DocumentView(ListCreateAPIView):
     queryset = Document.objects.all()
     serializer_class = DocumentSerializer
-    permission_classes = (IsAuthenticated,)
 
     def post(self, request, *args, **kwargs):
         if request.user:
@@ -58,7 +57,6 @@ class DocumentUploadView(APIView):
 class QuestionnaireView(ListCreateAPIView):
     queryset = Questionnaire.objects.all()
     serializer_class = QuestionnaireSerializer
-    permission_classes = (IsAuthenticated,)
 
     def post(self, request, *args, **kwargs):
         if request.user:
