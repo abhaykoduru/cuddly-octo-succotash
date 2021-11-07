@@ -26,7 +26,7 @@ TBD
 
 ## Todo
 
-* [x] Setup database (PostgreSQL, AWS)
+* [x] Setup database (PostgreSQL on local)
 * [x] Setup Django app
 * [x] Connection to database
 * [x] Create django models
@@ -35,10 +35,11 @@ TBD
     * [x] Questionnaire
 * [ ] Add APIs
     * [x] Authentication
-    * [ ] File upload
-    * [ ] Document search on title
-    * [ ] Questionnaire search on q & a
+    * [x] File upload
+    * [x] Document search on title
+    * [x] Questionnaire search on q & a
 * [ ] Add unit tests
+* [ ] Add docstrings wherever needed
 * [ ] Add UI pages
     * [ ] Login page
     * [ ] Upload page
@@ -54,3 +55,6 @@ TBD
 * Use DjangoObjectPermissions to achieve pseudo multitenancy.
 * Setup multiple DBs to achieve true multi-tenancy.
     * Implement an effecient way to access multiple tenant DBs for admin users.
+* Support more file formats-.docx,.xlx,.txt,.pdf-may be write a service to cleanup and convert these files to loadable .csv.
+* Write a custom JSONRenderer that can be used for all JSON requests.
+* Implement pagination for all list APIs.
