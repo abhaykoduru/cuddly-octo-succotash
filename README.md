@@ -44,3 +44,13 @@ TBD
     * [ ] Upload page
     * [ ] See uploaded documents?
     * [ ] Use django admin for admin users? With less than admin level perms?
+
+## Improvements
+
+* Support multiple choice questions on Questionnaire model.
+* Support for storing all uploaded files on cloud.
+* Support .csv files with headers in file and decide which model to save data to at runtime.
+* Add .csv file validations and raise appropriate exception when something is not right. Ex: bad file format, missing columns etc.
+* Use DjangoObjectPermissions to achieve pseudo multitenancy.
+* Setup multiple DBs to achieve true multi-tenancy.
+    * Implement an effecient way to access multiple tenant DBs for admin users.
