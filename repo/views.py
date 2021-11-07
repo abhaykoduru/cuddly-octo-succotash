@@ -1,5 +1,6 @@
 import io
 import pandas as pd
+from rest_framework.filters import SearchFilter
 from rest_framework.generics import ListCreateAPIView
 from rest_framework.parsers import FileUploadParser
 from rest_framework.permissions import IsAuthenticated
@@ -13,6 +14,8 @@ from .models import Document, Questionnaire
 class DocumentView(ListCreateAPIView):
     queryset = Document.objects.all()
     serializer_class = DocumentSerializer
+    filter_backends = [SearchFilter]
+    search_fields = ["title",]
 
     def post(self, request, *args, **kwargs):
         if request.user:
@@ -57,6 +60,8 @@ class DocumentUploadView(APIView):
 class QuestionnaireView(ListCreateAPIView):
     queryset = Questionnaire.objects.all()
     serializer_class = QuestionnaireSerializer
+    filter_backends = [SearchFilter]
+    search_fields = ["question", "answer",]
 
     def post(self, request, *args, **kwargs):
         if request.user:
