@@ -12,11 +12,17 @@ from .models import Document, Questionnaire
 
 
 class DocumentView(ListCreateAPIView):
-    queryset = Document.objects.all()
     serializer_class = DocumentSerializer
     filter_backends = [SearchFilter]
     search_fields = ["title",]
 
+    def get_queryset(self):
+        user = self.request.user
+        if user.is_staff or user.is_superuser:
+            return Document.objects.all()
+        
+        return Document.objects.filter(created_by=user)
+    
     def post(self, request, *args, **kwargs):
         if request.user:
             request.data["created_by"] = request.user.id
@@ -58,11 +64,17 @@ class DocumentUploadView(APIView):
 
 
 class QuestionnaireView(ListCreateAPIView):
-    queryset = Questionnaire.objects.all()
     serializer_class = QuestionnaireSerializer
     filter_backends = [SearchFilter]
     search_fields = ["question", "answer",]
 
+    def get_queryset(self):
+        user = self.request.user
+        if user.is_staff or user.is_superuser:
+            return Questionnaire.objects.all()
+        
+        return Questionnaire.objects.filter(created_by=user)
+    
     def post(self, request, *args, **kwargs):
         if request.user:
             request.data["created_by"] = request.user.id
