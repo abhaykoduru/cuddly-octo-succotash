@@ -1,3 +1,4 @@
+import csv
 import io
 import pandas as pd
 from rest_framework.filters import SearchFilter
@@ -39,7 +40,7 @@ class DocumentUploadView(APIView):
         io_string = io.StringIO(data_set)
         io_string = io.StringIO(data_set)
 
-        csv_file = pd.read_csv(io_string, low_memory=False, header=None)
+        csv_file = pd.read_csv(io_string, quotechar='"', quoting= csv.QUOTE_ALL,low_memory=False, header=None)
 
         if len(csv_file) > 1:
             raise InvalidDocumentError("More than 1 row found in the document.")
