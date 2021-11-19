@@ -33,16 +33,16 @@ TBD
     * [x] User
     * [x] Documentx
     * [x] Questionnaire
-* [ ] Add APIs
+* [x] Add APIs
     * [x] Authentication
     * [x] File upload
     * [x] Document search on title
     * [x] Questionnaire search on q & a
 * [ ] Add unit tests
 * [ ] Add docstrings wherever needed
-* [ ] Add UI pages
-    * [ ] Login page
-    * [ ] Upload page
+* [x] Add UI pages
+    * [x] Login page
+    * [x] Upload page
     * [ ] See uploaded documents?
     * [ ] Use django admin for admin users? With less than admin level perms?
 
